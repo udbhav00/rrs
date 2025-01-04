@@ -1,0 +1,207 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Submit Review</title>
+</head>
+<body>
+    <h1>Submit a Review</h1>
+    <form method="post">
+        {% csrf_token %}
+        <textarea name="review" rows="5" cols="40" placeholder="Enter your review here..."></textarea><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Gourmet Haven - Submit Your Review</title>
+     <style>
+         /* Base Reset */
+         * {
+             margin: 0;
+             padding: 0;
+             box-sizing: border-box;
+         }
+ 
+         body {
+             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+             background-color: #f4f4f4;
+             color: #333;
+             line-height: 1.6;
+         }
+ 
+         /* Header */
+         header {
+             background: linear-gradient(135deg, rgba(46, 204, 113, 0.8), rgba(52, 152, 219, 0.8)),
+                 url('https://via.placeholder.com/1920x400?text=Gourmet+Haven+Restaurant') no-repeat center/cover;
+             color: #fff;
+             text-align: center;
+             padding: 80px 20px;
+             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+             position: relative;
+         }
+ 
+         header h1 {
+             font-size: 3.5rem;
+             margin-bottom: 15px;
+             text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+         }
+ 
+         header p {
+             font-size: 1.5rem;
+             font-style: italic;
+             text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+         }
+ 
+         /* Main Container */
+         .container {
+             max-width: 700px;
+             margin: 50px auto;
+             background: #fff;
+             padding: 30px;
+             border-radius: 10px;
+             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+         }
+ 
+         .container h2 {
+             font-size: 2rem;
+             margin-bottom: 20px;
+             text-align: center;
+             color: #2c3e50;
+         }
+ 
+         .container p {
+             text-align: center;
+             margin-bottom: 30px;
+             color: #666;
+             font-size: 1rem;
+         }
+ 
+         /* Form */
+         form {
+             display: flex;
+             flex-direction: column;
+         }
+ 
+         textarea {
+             resize: none;
+             padding: 15px;
+             font-size: 1rem;
+             border: 1px solid #ddd;
+             border-radius: 5px;
+             margin-bottom: 20px;
+             transition: border-color 0.3s ease, box-shadow 0.3s ease;
+         }
+ 
+         textarea:focus {
+             border-color: #16a085;
+             box-shadow: 0 4px 8px rgba(22, 160, 133, 0.2);
+             outline: none;
+         }
+ 
+         button {
+             background: #2980b9;
+             color: #fff;
+             padding: 12px;
+             font-size: 1rem;
+             border: none;
+             border-radius: 5px;
+             cursor: pointer;
+             transition: background-color 0.3s ease, transform 0.2s ease;
+         }
+ 
+         button:hover {
+             background: #1f618d;
+             transform: scale(1.05);
+         }
+ 
+         button:active {
+             transform: scale(1);
+         }
+ 
+         /* Decorative Image */
+         .decorative-image {
+             margin: 30px auto;
+             text-align: center;
+         }
+ 
+         .decorative-image img {
+             max-width: 100%;
+             border-radius: 10px;
+             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+             transition: transform 0.3s ease;
+         }
+ 
+         .decorative-image img:hover {
+             transform: scale(1.05);
+         }
+ 
+         /* Testimonial */
+         .testimonial {
+             margin: 30px auto;
+         }
+ 
+         /* Footer */
+         footer {
+             background-color: #34495e;
+             color: #ecf0f1;
+             text-align: center;
+             padding: 20px;
+             margin-top: 40px;
+         }
+ 
+         footer p {
+             font-size: 0.9rem;
+         }
+ 
+         footer a {
+             color: #ecf0f1;
+             text-decoration: none;
+             transition: color 0.3s ease;
+         }
+ 
+         footer a:hover {
+             color: #bdc3c7;
+         }
+     </style>
+ </head>
+ <body>
+     <!-- Header Section -->
+     <header>
+         <h1>Gourmet Haven</h1>
+         <p>Your feedback drives our excellence.</p>
+     </header>
+ 
+     <!-- Main Content -->
+     <div class="container">
+         <h2>Share Your Experience</h2>
+         <p>Your opinion matters to us. Let us know how we did!</p>
+         <form method="post">
+             {% csrf_token %}
+             <textarea name="review" placeholder="Write your review here..." rows="4" required></textarea>
+             <button type="submit">Submit Your Review</button>
+         </form>
+     </div>
+ 
+     <!-- Updated Section Above Footer with a New Image -->
+     <!-- <div class="decorative-image">
+         <img src="https://via.placeholder.com/600x400?text=Delicious+Plates+of+Food" alt="Delicious Plates of Food">
+     </div>
+  -->
+     <div class="testimonial">
+         <p style="font-size: 1.2rem; font-style: italic; color: #34495e; text-align: center;">
+             "Every meal tells a story, and at Gourmet Haven, we make sure it’s a story worth savoring."
+         </p>
+     </div>
+ 
+     <!-- Footer -->
+     <footer>
+         <p>&copy; 2025 Gourmet Haven. All rights reserved. | <a href="#">Privacy Policy</a></p>
+     </footer>
+ </body>
+ </html>
+ 
